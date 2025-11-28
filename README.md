@@ -4,7 +4,7 @@
 
 This repo contains the simulaton code with Gazebo associated to our paper [Adaptive Legged Locomotion via Online Learning for Model Predictive Control](https://arxiv.org/abs/2510.15626) (accepted to IEEE Robotics and Automation Letters). The algorithm is built upon our previous paper [Simultaneous System Identification and Model Predictive Control with No Dynamic Regret](https://arxiv.org/abs/2407.04143). In the paper, we propose the algorithm SSI-MPC for adaptive legged locomotion, with simultaneous model learning of unknown dyanmics/disturbance in a self-supervised manner using only the data collected on-the-go (i.e., without offline training), and model predictive control. 
 
-![image](https://github.com/UM-iRaL/Adaptive-Legged-Locomotion/tree/main/doc/front.png)
+![image](https://github.com/UM-iRaL/Adaptive-Legged-Locomotion/tree/main/doc/front.pdf)
 
 
 ### License
@@ -78,11 +78,11 @@ Refer to the [Wiki](https://github.com/robomechanics/quad-sdk/wiki/2.-Using-the-
 
 ## Notes
 
-In /nmpc_controller/src/quad_nlp_utils.cpp
-- load basic leg controller functions for the Robot_NAME platform
+In `/nmpc_controller/src/quad_nlp_utils.cpp`
+- load basic leg controller functions for the `Robot_NAME` platform
 
 MATLAB
-- If you use different number of random features in SSI-MPC, you will need additional dynamics files with name <robot_name>_rf. The MATLAB code for generating dynamics can be found under `nmpc_controller/scripts/`. Currently, the provided generated code has used 50 random features.
+- If you use different number of random features in SSI-MPC, you will need additional dynamics files with name `<robot_name>_rf`. The MATLAB code for generating dynamics can be found under `nmpc_controller/scripts/`. Currently, the provided generated code has used 50 random features.
 
 Adaptive MPC
 - `Nominal MPC`, `L1 MPC`, and `SSI-MPC` can be selected in `local_planner.yaml`:
